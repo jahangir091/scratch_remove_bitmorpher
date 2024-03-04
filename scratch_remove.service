@@ -1,0 +1,13 @@
+[Unit]
+Description=Gunicorn Daemon for FastAPI Scratch Remove Project
+After=network.target
+
+
+[Service]
+WorkingDirectory=/home/scratch_remove_bitmorpher
+ExecStartPre=/bin/bash -c 'mkdir -p /run/scratch_remove; chown www-data:www-data /run/scratch_remove'
+ExecStart=/home/scratch_remove_bitmorpher/.venv/bin/gunicorn -c gunicorn_conf.py main:app
+
+
+[Install]
+WantedBy=multi-user.target

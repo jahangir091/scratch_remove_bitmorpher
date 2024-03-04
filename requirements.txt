@@ -1,5 +1,6 @@
 fastapi
 uvicorn[standard]
+gunicorn
 glob2==0.5
 xformers
 scipy==1.11.4
