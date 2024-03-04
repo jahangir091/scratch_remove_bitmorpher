@@ -1,6 +1,7 @@
 import time
 
 from fastapi import FastAPI, Body
+import uvicorn
 
 from utils import get_img_path, decode_base64_to_image
 from scratch_remove.scratch_remove_utils import remove_scratch_using_mask
@@ -40,3 +41,7 @@ async def generate_mask_image(
         "server_process_time": time.time() - start_time,
         "output_image_urls": '/media' + out_images_directory_name + out_image_path.split('/')[-1]
     }
+
+
+if __name__ == '__main__':
+    uvicorn.run(app, host="0.0.0.0", port=8000)

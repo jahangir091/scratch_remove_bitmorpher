@@ -8,8 +8,8 @@ from PIL import Image, ImageFile
 import torchvision.transforms as transforms
 import torchvision as tv
 
-from detection_models import networks
-from scratch_remove_utils import SCRATCH_MODEL_NAME, MODEL_PATH
+from scratch_remove.detection_models import networks
+from scratch_remove.download_file import SCRATCH_MODEL_NAME, MODEL_PATH
 
 warnings.filterwarnings("ignore", category=UserWarning)
 

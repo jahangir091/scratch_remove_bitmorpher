@@ -6,13 +6,10 @@ import torch
 
 from diffusers import ControlNetModel, DEISMultistepScheduler
 
-from scratch_detection import ScratchDetection
-from pipeline_stable_diffusion_controlnet_inpaint import StableDiffusionControlNetInpaintPipeline
-from download_file import download_file
-
-SCRATCH_MODEL_NAME = "FT_Epoch_latest.pt"
-MODEL_PATH = "/tmp/models/scratch_models"
-scratch_model_file_download_url = "https://www.dropbox.com/s/5jencqq4h59fbtb/FT_Epoch_latest.pt"
+from scratch_remove.scratch_detection import ScratchDetection
+from scratch_remove.pipeline_stable_diffusion_controlnet_inpaint import StableDiffusionControlNetInpaintPipeline
+from scratch_remove.download_file import download_file
+from scratch_remove.download_file import SCRATCH_MODEL_NAME, MODEL_PATH, scratch_model_file_download_url
 
 device = "cuda"
 

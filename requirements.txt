@@ -7,3 +7,6 @@ ftfy==6.1.3
 controlnet-aux==0.0.6
 easydict==1.11
 piexif
+diffusers==0.14.0
+accelerate
+transformers==4.30.2
