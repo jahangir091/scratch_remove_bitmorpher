@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+glob2==0.5
+#xformers
+scipy==1.11.4
+ftfy==6.1.3
+controlnet-aux==0.0.6
+easydict==1.11
+piexif
