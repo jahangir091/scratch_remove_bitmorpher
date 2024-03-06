@@ -39,7 +39,7 @@ async def generate_mask_image(
         "success": True,
         "message": "Returned output successfully",
         "server_process_time": time.time() - start_time,
-        "output_image_urls": '/media' + out_images_directory_name + out_image_path.split('/')[-1]
+        "output_image_url": '/media' + out_images_directory_name + out_image_path.split('/')[-1]
     }
 
 
