@@ -21,13 +21,13 @@ async def scratch_remove_server_test():
 
 @app.post('/ai/api/v1/scratch_remove')
 async def generate_mask_image(
-        input_image: str = Body("", title='scratch remove input image'),
+        image: str = Body("", title='scratch remove input image'),
         upscale: bool = Body(False, title='input image name')
 ):
     start_time = time.time()
 
     download_scratch_remover_model()
-    pil_image = decode_base64_to_image(input_image).convert("RGB")
+    pil_image = decode_base64_to_image(image).convert("RGB")
     out_image = remove_scratch_using_mask(pil_image, upscale)
 
     out_images_directory_name = '/scratch_images/'
