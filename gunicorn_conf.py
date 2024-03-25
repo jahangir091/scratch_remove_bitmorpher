@@ -8,6 +8,9 @@ bind = 'unix:/run/scratch_remove/gunicorn.sock'
 workers = 1
 worker_class = 'uvicorn.workers.UvicornWorker'
 
+# Worker timeout
+timeout = 300
+
 # Logging Options
 loglevel = 'debug'
 accesslog = '/var/log/scratch_remove/access.log'
